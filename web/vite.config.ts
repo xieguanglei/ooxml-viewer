@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite';
 
-export default defineConfig({
+const repoName = 'ooxml-viewer';
+
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? `/${repoName}/` : '/',
   build: {
     outDir: 'dist',
     target: 'es2022',
@@ -9,4 +12,4 @@ export default defineConfig({
     open: true,
     port: 5173,
   },
-});
+}));
