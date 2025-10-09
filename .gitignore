@@ -1,0 +1,6 @@
+/web/node_modules
+/web/dist
+/web/pkg
+/wasm-core/pkg
+/target
+.DS_Store

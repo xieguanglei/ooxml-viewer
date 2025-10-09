@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OOXML Viewer</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <header class="intro">
+        <h1>OOXML Viewer</h1>
+        <p>Upload a .docx or .pptx file to explore its internal structure and inspect XML parts.</p>
+      </header>
+
+      <section class="uploader">
+        <label for="file-input" class="uploader__label">Choose document</label>
+        <input id="file-input" type="file" accept=".docx,.pptx" disabled />
+        <span id="status" class="status">Loading wasm runtime…</span>
+      </section>
+
+      <section class="workspace">
+        <nav id="toc" class="toc" aria-label="Document structure">
+          <p class="placeholder">Select a document to build the directory tree.</p>
+        </nav>
+        <article class="viewer" aria-live="polite">
+          <h2 id="selected-path" class="viewer__title">No part selected</h2>
+          <pre id="file-content" class="viewer__content">Upload a document and choose an XML file to preview its contents.</pre>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
