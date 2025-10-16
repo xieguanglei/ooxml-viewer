@@ -10,12 +10,12 @@
     <main id="app">
       <header class="intro">
         <h1>OOXML Viewer</h1>
-        <p>Upload a .docx or .pptx file to explore its internal structure and inspect XML parts.</p>
+        <p>Upload a .docx, .pptx, or .xlsx file to explore its internal structure and inspect XML parts.</p>
       </header>
 
       <section class="uploader">
         <label for="file-input" class="uploader__label">Choose document</label>
-        <input id="file-input" type="file" accept=".docx,.pptx" disabled />
+        <input id="file-input" type="file" accept=".docx,.pptx,.xlsx" disabled />
         <span id="status" class="status">Loading wasm runtime…</span>
       </section>
 

@@ -58,7 +58,7 @@ async function bootstrap() {
     await module.default();
     module.init();
     wasm = module;
-    setStatus('Ready. Upload a .docx or .pptx file.', 'success');
+    setStatus('Ready. Upload a .docx, .pptx, or .xlsx file.', 'success');
     fileInput.disabled = false;
   } catch (error) {
     console.error('Failed to initialise wasm', error);
@@ -91,7 +91,7 @@ async function handleFileSelection() {
     renderArchive(summary, file.name);
   } catch (error) {
     console.error('Processing failed', error);
-    setStatus('Failed to read archive. Ensure the file is a valid .docx or .pptx.', 'error');
+    setStatus('Failed to read archive. Ensure the file is a valid .docx, .pptx, or .xlsx.', 'error');
   }
 }
 
